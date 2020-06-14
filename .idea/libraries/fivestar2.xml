@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="fivestar2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/run123374398/fivestar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
