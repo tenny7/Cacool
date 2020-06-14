@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">-->
+
+<BorderPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fivestar.FXMLDocumentController">
+   <bottom>
+      <HBox prefHeight="89.0" prefWidth="600.0" style="-fx-background-color: #175dd0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="status" alignment="CENTER" prefHeight="91.0" prefWidth="598.0" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About Performance Calculator" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <DropShadow />
+         </effect>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Calculator">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="21.0" layoutY="23.0" prefHeight="183.0" prefWidth="55.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="524.0" AnchorPane.topAnchor="23.0">
+                           <children>
+                              <Label text="5 Star">
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text="4 Star">
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="27.0" text="3 Star">
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="44.0" text="2 Star">
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="61.0" text="1 Star">
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <TextField fx:id="fiveStar" layoutX="93.0" layoutY="38.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
+                        <TextField fx:id="fourStar" layoutX="93.0" layoutY="71.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
+                        <TextField fx:id="threeStar" layoutX="93.0" layoutY="105.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
+                        <TextField fx:id="twoStar" layoutX="93.0" layoutY="141.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
+                        <TextField fx:id="oneStar" layoutX="93.0" layoutY="175.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
+                        <Button fx:id="calculateRating" layoutX="96.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleCalculateRating" text="Compute" />
+                        <Label fx:id="displayTarget" alignment="CENTER" contentDisplay="CENTER" layoutX="366.0" layoutY="9.0" prefHeight="19.0" prefWidth="190.0">
+                           <font>
+                              <Font name="Georgia Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="307.0" prefHeight="0.0" prefWidth="600.0" />
+                        <HBox layoutX="334.0" layoutY="32.0" prefHeight="37.0" prefWidth="246.0" spacing="10.0">
+                           <children>
+                              <Label text="Target">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="monthlyTarget" prefHeight="26.0" prefWidth="94.0" promptText="e.g 4.6" />
+                              <Button fx:id="setTarget" mnemonicParsing="false" onAction="#handleSetTarget" prefHeight="27.0" prefWidth="44.0" text="set" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <TextField fx:id="noOfRating" layoutX="184.0" layoutY="38.0" prefHeight="25.0" prefWidth="128.0" promptText="No of Ratings" text="0" />
+                        <VBox layoutX="342.0" layoutY="88.0" prefHeight="140.0" prefWidth="239.0" spacing="5.0" style="-fx-border-radius: 15; -fx-border-style: dotted; -fx-border-color: gray;">
+                           <children>
+                              <Label fx:id="displayInfo" prefHeight="48.0" prefWidth="197.0">
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Georgia Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="neededFiveStars" prefHeight="52.0" prefWidth="217.0">
+                                 <font>
+                                    <Font name="Georgia Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <Button fx:id="fetchData" layoutX="185.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleFetchData" prefHeight="24.0" prefWidth="128.0" text="Fetch Current Target" />
+                        <Label layoutX="184.0" layoutY="15.0" prefHeight="17.0" prefWidth="114.0" text="Survey Count">
+                           <font>
+                              <Font name="Georgia Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="History">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView" layoutX="-6.0" prefHeight="188.0" prefWidth="613.0">
+                          <columns>
+                            <TableColumn fx:id="firstColumn" prefWidth="81.0" text="Target KPI" />
+                              <TableColumn fx:id="secondColumn" prefWidth="76.0" text="Current KPI" />
+                              <TableColumn fx:id="thirdColumn" prefWidth="99.0" text="Ratings Count" />
+                              <TableColumn fx:id="fourthColumn" prefWidth="54.0" text="Sum" />
+                              <TableColumn fx:id="fifthColumn" prefWidth="121.0" text="Total 5 stars" />
+                              <TableColumn fx:id="sixthColumn" prefWidth="174.0" text="Updated_at" />
+                          </columns>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" />
+                           </padding>
+                        </TableView>
+                        <Button fx:id="refresh" layoutX="241.0" layoutY="205.0" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="36.0" prefWidth="119.0" text="Refresh" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
