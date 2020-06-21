@@ -107,12 +107,12 @@
                               </Label>
                            </children>
                         </VBox>
-                        <TextField fx:id="fiveStar" layoutX="93.0" layoutY="38.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
-                        <TextField fx:id="fourStar" layoutX="93.0" layoutY="71.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
-                        <TextField fx:id="threeStar" layoutX="93.0" layoutY="105.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
-                        <TextField fx:id="twoStar" layoutX="93.0" layoutY="141.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
-                        <TextField fx:id="oneStar" layoutX="93.0" layoutY="175.0" prefHeight="25.0" prefWidth="70.0" promptText="count" text="0" />
-                        <Button fx:id="calculateRating" layoutX="96.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleCalculateRating" text="Compute" />
+                        <TextField fx:id="fiveStar" layoutX="93.0" layoutY="38.0" prefHeight="25.0" prefWidth="70.0" promptText="count" />
+                        <TextField fx:id="fourStar" layoutX="93.0" layoutY="71.0" prefHeight="25.0" prefWidth="70.0" promptText="count" />
+                        <TextField fx:id="threeStar" layoutX="93.0" layoutY="105.0" prefHeight="25.0" prefWidth="70.0" promptText="count" />
+                        <TextField fx:id="twoStar" layoutX="93.0" layoutY="141.0" prefHeight="25.0" prefWidth="70.0" promptText="count" />
+                        <TextField fx:id="oneStar" layoutX="93.0" layoutY="175.0" prefHeight="25.0" prefWidth="70.0" promptText="count" />
+                        <Button fx:id="calculateRating" layoutX="16.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleCalculateRating" text="Compute" />
                         <Label fx:id="displayTarget" alignment="CENTER" contentDisplay="CENTER" layoutX="366.0" layoutY="9.0" prefHeight="19.0" prefWidth="214.0">
                            <font>
                               <Font name="Georgia Bold" size="14.0" />
@@ -164,9 +164,10 @@
                         </VBox>
                         <ImageView fitHeight="117.0" fitWidth="103.0" layoutX="204.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@imageonline-co-transparentimage.png" />
+                              <Image url="@logo.png" />
                            </image>
                         </ImageView>
+                        <Button fx:id="rollBack" layoutX="102.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleRollBack" prefHeight="25.0" prefWidth="63.0" text="Rollback" />
                      </children>
                   </AnchorPane>
             </content>

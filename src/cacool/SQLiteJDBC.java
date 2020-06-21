@@ -94,7 +94,10 @@ public class SQLiteJDBC {
             createConnection();
         }
         String update_fivestar_tb = "UPDATE fivestar_tb SET Current_kpi=?, Total_rating =?,Weighted_sum =?,Five_stars_count=?,Entry_date=? WHERE Target_kpi=?";
+
         PreparedStatement prep_2 = connection.prepareStatement(update_fivestar_tb);
+        connection.setAutoCommit(false);
+
             prep_2.setDouble(1, CurrentKpi);
             prep_2.setInt(2, TotalRating);
             prep_2.setDouble(3, NewSum);
@@ -102,6 +105,10 @@ public class SQLiteJDBC {
             prep_2.setString(5, LocalDateTime.of(LocalDate.now(), LocalTime.now()).toString());
             prep_2.setDouble(6, TargetKpi);
             prep_2.executeUpdate();
+            prep_2.close();
+
+
+
     }
 
     public static void updateFiveStarNeeded(int needed_five_stars,double target_kpi, double current_kpi)throws ClassNotFoundException, SQLException{
