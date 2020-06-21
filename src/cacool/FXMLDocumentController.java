@@ -237,7 +237,11 @@ public class FXMLDocumentController implements Initializable {
                             status.setText("Microsoft needs you!");
                             neededFiveStars.setText("Needed 5 stars: "+ needStarsArray[0]);
                         }
-
+                                fiveStar.setText("");
+                                fourStar.setText("");
+                                threeStar.setText("");
+                                twoStar.setText("");
+                                oneStar.setText("");
                         refreshTable();
                     } catch (NumberFormatException | ClassNotFoundException | NoSuchElementException | SQLException e) {
                         status.setText("Error: " + e.getMessage() + e.getCause() );
