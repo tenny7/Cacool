@@ -17,6 +17,9 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+
+
+
 import javax.swing.*;
 
 public class Fivestar extends Application {
@@ -26,7 +29,7 @@ public class Fivestar extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception, ClassNotFoundException, SQLException {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        primaryStage.setTitle("Performance Calculator");
+        primaryStage.setTitle("Key Performance Indicator");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.setResizable(false);
         primaryStage.show();

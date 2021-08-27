@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Cacool Artifact Config">
+    <output-path>$PROJECT_DIR$/out/artifacts/Cacool_Artifact_Config</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="cacool.Fivestar" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="exe" />
+        <option name="title" value="Cacool" />
+        <option name="vendor" value="Tennyson Corp." />
+        <option name="version" value="1.0.0.1" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="fivestar.jar">
+        <element id="module-output" name="fivestar" />
+      </element>
+    </root>
+  </artifact>
+</component>

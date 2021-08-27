@@ -38,11 +38,6 @@
                   <Font name="Georgia" size="18.0" />
                </font>
             </Label>
-            <Label prefHeight="17.0" prefWidth="437.0" text="Developed by Tennyson Onovwiona" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
          </children>
       </HBox>
    </bottom>
@@ -133,9 +128,9 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </HBox>
-                        <VBox layoutX="246.0" layoutY="130.0" prefHeight="98.0" prefWidth="335.0" spacing="5.0" style="-fx-border-radius: 15; -fx-border-style: dotted; -fx-border-color: gray;">
+                        <VBox layoutX="344.0" layoutY="88.0" prefHeight="140.0" prefWidth="237.0" spacing="5.0" style="-fx-border-radius: 15; -fx-border-style: dotted; -fx-border-color: gray;">
                            <children>
-                              <Label fx:id="displayInfo" prefHeight="40.0" prefWidth="228.0">
+                              <Label fx:id="displayInfo" prefHeight="48.0" prefWidth="197.0">
                                  <padding>
                                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                  </padding>
@@ -146,7 +141,7 @@
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label fx:id="neededFiveStars" prefHeight="40.0" prefWidth="322.0">
+                              <Label fx:id="neededFiveStars" prefHeight="52.0" prefWidth="217.0">
                                  <font>
                                     <Font name="Georgia Bold" size="20.0" />
                                  </font>
@@ -162,12 +157,17 @@
                               <Insets bottom="5.0" top="5.0" />
                            </padding>
                         </VBox>
-                        <ImageView fitHeight="117.0" fitWidth="103.0" layoutX="197.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="117.0" fitWidth="103.0" layoutX="204.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@logo.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="rollBack" layoutX="102.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleRollBack" prefHeight="25.0" prefWidth="63.0" text="Rollback" />
+                        <Label layoutX="8.0" layoutY="10.0" prefHeight="17.0" prefWidth="136.0" text="Developed by Tennyson">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
             </content>

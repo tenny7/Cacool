@@ -18,14 +18,12 @@ import javafx.fxml.Initializable;
  */
 public class Ratings implements Initializable {
 
-    private SimpleDoubleProperty Target_kpi, Current_kpi;
-    private SimpleIntegerProperty Five_stars_count,Total_rating;
-    private SimpleStringProperty Entry_date;
-//    Weighted_sum,
+    private SimpleDoubleProperty    Target_kpi, Current_kpi;
+    private SimpleIntegerProperty   Five_stars_count,Total_rating;
+    private SimpleStringProperty    Entry_date;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     public Ratings(Double target_kpi, Double current_kpi, Integer total_rating, int Five_stars_count,String entry_date) {
@@ -34,7 +32,6 @@ public class Ratings implements Initializable {
         this.Total_rating       = new SimpleIntegerProperty(total_rating) ;
         this.Five_stars_count   = new SimpleIntegerProperty(Five_stars_count);
         this.Entry_date         = new SimpleStringProperty(entry_date);
-
     }
 
     public double getTarget_kpi() {
@@ -61,9 +58,7 @@ public class Ratings implements Initializable {
         this.Total_rating.set(total_rating);
     }
 
-
     public int getFive_stars_count() { return Five_stars_count.get(); }
-
 
     public void setFive_stars_count(int five_stars_count) { this.Five_stars_count.set(five_stars_count); }
 
